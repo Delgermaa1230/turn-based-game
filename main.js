@@ -21,6 +21,9 @@ function renderGame() {
             cell.textContent = gameBoard[i][j];
             cell.addEventListener('click', () => handleCellClick(i, j));
 
+            // Add class for player-specific styling
+            cell.classList.add(`player-${gameBoard[i][j] === 'X' ? 'one' : 'two'}`);
+
             gameBoardElement.appendChild(cell);
         }
     }
