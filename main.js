@@ -1,5 +1,3 @@
-// Sample JavaScript code
-
 // Game state
 let currentPlayer = 'Player 1';
 let gameBoard = [
@@ -22,7 +20,7 @@ function renderGame() {
             cell.addEventListener('click', () => handleCellClick(i, j));
 
             // Add class for player-specific styling
-            cell.classList.add(`player-${gameBoard[i][j] === 'X' ? 'one' : 'two'}`);
+            cell.classList.add(currentPlayer === 'Player 1' ? 'player-one' : 'player-two');
 
             gameBoardElement.appendChild(cell);
         }
@@ -31,6 +29,12 @@ function renderGame() {
     // Update player information
     const playerInfoElement = document.getElementById('player-info');
     playerInfoElement.textContent = `Current Player: ${currentPlayer}`;
+
+    // Update button color based on the current player
+    const buttons = document.getElementsByClassName('cell');
+    for (let button of buttons) {
+        button.style.backgroundColor = currentPlayer === 'Player 1' ? '#ff69b4' : '#00ff00';
+    }
 }
 
 // Function to handle cell click
@@ -109,5 +113,3 @@ function resetGame() {
 
 // Initial render
 renderGame();
-
-

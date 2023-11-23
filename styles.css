@@ -1,11 +1,20 @@
 body {
     display: flex;
+    flex-direction: column; /* Change to column layout */
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
     font-family: 'Arial', sans-serif;
+}
+
+#player-info {
+    margin-bottom: 20px; /* Add margin to separate from the game board */
+    font-size: 22px;
+    text-align: center;
+    color: #555;
+    font-weight: 200;
 }
 
 #game-board {
@@ -34,23 +43,18 @@ body {
 
 /* Player 1 styling */
 .player-one {
-    background-color: #fba3cf; /* Cool Pink */
+    background-color: #f8bbda; /* Cool Pink */
 }
 
 /* Player 2 styling */
 .player-two {
-    background-color: #c9ffc9; /* Cool Green */
+    background-color: #b8f7b8; /* Cool Green */
 }
 
 .cell:hover {
     background-color: #777;
 }
 
-#player-info {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: center;
-    color: #555;
-}
+
 
 
