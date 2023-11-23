@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-board {
+    /* Add your game board styles here */
+}
+
+#player-info {
+    /* Add styles for player information */
+}
